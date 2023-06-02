@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title text-truncate" id="modal-title" [title]="title">{{ title }}</h4>
+  <button
+      type="button"
+      class="btn-close ms-3"
+      aria-describedby="modal-title"
+      (click)="close()"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="qrcodeImage justify-content-center">
+    <qrcode
+      #qrCode
+      [qrdata]="data"
+      [allowEmptyString]="false"
+      [cssClass]="'center'"
+      [colorDark]="'#1d2a4d'"
+      [colorLight]="'#ffffffff'"
+      [elementType]="'canvas'"
+      [errorCorrectionLevel]="'M'"
+      [margin]="4"
+      [scale]="1"
+      [width]="300"
+      [imageSrc]="'./assets/img/icon.png'"
+      [imageHeight]="50"
+      [imageWidth]="50"
+    ></qrcode>
+  </div>
+  <div *ngIf="allowDownload" class="d-flex justify-content-center">
+    <button class="btn btn-primary" (click)="download(qrCode)">Tải xuống</button>
+  </div>
+</div>

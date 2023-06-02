@@ -1,0 +1,9 @@
+<div>
+    <zxing-scanner
+        #scanner
+        [scannerEnabled]="enabled"
+        [formats]="allowedFormats"
+        (scanSuccess)="scanSuccess($event)"
+        (scanError)="scanError($event)"
+    ></zxing-scanner>
+</div>

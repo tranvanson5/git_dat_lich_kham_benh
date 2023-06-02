@@ -1,0 +1,12 @@
+<div>
+    <div class="title-container mb-3">
+        <span class="title">QUÉT MÃ GÓI DỊCH VỤ</span>
+    </div>
+    <app-qr-scanner
+        #scanner
+        [autoOpenCam]="false"
+        [isBeep]="true"
+        [offCamAfterSuccess]="true"
+        (success)="scanSuccess($event)"
+    ></app-qr-scanner>
+</div>

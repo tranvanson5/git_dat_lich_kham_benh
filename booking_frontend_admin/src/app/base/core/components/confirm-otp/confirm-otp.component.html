@@ -1,0 +1,23 @@
+<div *ngIf="data">
+    <div class="d-flex justify-content-between">
+        <h2 mat-dialog-title>Xác nhận</h2>
+        <span class="time-close" (click)="doClose()">&times;</span>
+    </div>
+    <mat-dialog-content>
+        <form [formGroup]="formGroup" id="signup-form" class="signup-form">
+            <div class="form-group d-flex flex-column">
+                <label class="required">OTP</label>
+                <input 
+                    class="form-control"
+                    placeholder="OTP"
+                    formControlName="otp"
+                    [class.border-danger]="formControl.otp.touched && formControl.otp.invalid"
+                />
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button class="btn-primary mr-2" (click)="confirm()">Xác nhận</button>
+        <button class="btn-close mr-2" (click)="doClose()">Hủy bỏ</button>
+    </mat-dialog-actions>
+</div>
