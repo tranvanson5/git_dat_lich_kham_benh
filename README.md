@@ -1,5 +1,5 @@
 # git_dat_lich_kham_benh
-1.Tool : Intelij , webstorm.
+1.Tool : Intellij , webstorm.
 
 2.Môi trường: jdk 17, nodejs 18
 
